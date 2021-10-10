@@ -14,7 +14,6 @@ using std::sort;
 using std::endl;
 
 Avaliador::Avaliador() {
-    cout << "Criando um novo avaliador" << endl;
 }
 
 void Avaliador::avalia(Leilao leilao) {
