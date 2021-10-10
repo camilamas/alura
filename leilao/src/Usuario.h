@@ -1,14 +1,18 @@
 #ifndef Usuario_h
 #define Usuario_h
 #include <string>
+using std::string;
 
 class Usuario
 {
 private:
-    std::string nome;
+    string nome;
+    string primeiroNome;
 public:
-    Usuario(std::string);
-    std::string recuperaNome() const;
+    Usuario(string);
+    string recuperaNome() const;
+    string recuperaPrimeiroNome();
+
 };
 
 #endif /* Usuario_h */

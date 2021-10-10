@@ -85,3 +85,11 @@ TEST_CASE("Leilao nao deve receber lances repetidos do mesmo usuario") {
     REQUIRE(1 == leilaor.recuperaLances().size());
     REQUIRE(1000 == leilaor.recuperaLances()[0].recuperaValor());
 }
+
+TEST_CASE("Usuario deve saber informar seu primeiro nome") {
+    Usuario vinicius("Vinicius Dias");
+
+    string primeiroNome = vinicius.recuperaPrimeiroNome();
+
+    REQUIRE("Vinicius" == vinicius.recuperaPrimeiroNome());
+}
