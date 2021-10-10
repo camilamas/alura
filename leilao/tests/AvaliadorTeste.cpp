@@ -3,8 +3,6 @@
 //
 
 #include "../src/Avaliador.h"
-#include<iostream>
-#define CATCH_CONFIG_MAIN
 #include "../catch2.h"
 #include<iostream>
 
@@ -70,26 +68,4 @@ TEST_CASE("Avaliador") {
         REQUIRE(3000 == maiores3Lances[1].recuperaValor());
         REQUIRE(2000 == maiores3Lances[2].recuperaValor());
     }
-}
-
-TEST_CASE("Leilao nao deve receber lances repetidos do mesmo usuario") {
-    //Arrange
-    Leilao leilaor("Fiat 147 0km");
-    Usuario vinicius("Vinicius Dias");
-    Lance primeiroLance(vinicius,1000);
-    Lance segundoLance(vinicius,1500);
-    //Act
-    leilaor.recebeLance(primeiroLance);
-    leilaor.recebeLance(segundoLance);
-    //Assert
-    REQUIRE(1 == leilaor.recuperaLances().size());
-    REQUIRE(1000 == leilaor.recuperaLances()[0].recuperaValor());
-}
-
-TEST_CASE("Usuario deve saber informar seu primeiro nome") {
-    Usuario vinicius("Vinicius Dias");
-
-    string primeiroNome = vinicius.recuperaPrimeiroNome();
-
-    REQUIRE("Vinicius" == vinicius.recuperaPrimeiroNome());
 }

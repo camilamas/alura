@@ -1,0 +1,3 @@
+C:/Users/joaom/Documents/GitHub/alura/leilao/cmake-build-debug/CMakeFiles/leilao.dir
+C:/Users/joaom/Documents/GitHub/alura/leilao/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/joaom/Documents/GitHub/alura/leilao/cmake-build-debug/CMakeFiles/rebuild_cache.dir
