@@ -6,9 +6,16 @@
 #include "Lance.h"
 #include<vector>
 #include<algorithm>
+#include<iostream>
 
 using std::vector;
-//using std::sort;
+using std::cout;
+using std::sort;
+using std::endl;
+
+Avaliador::Avaliador() {
+    cout << "Criando um novo avaliador" << endl;
+}
 
 void Avaliador::avalia(Leilao leilao) {
     vector<Lance> lances = leilao.recuperaLances();
@@ -20,7 +27,7 @@ void Avaliador::avalia(Leilao leilao) {
             menorValor = lance.recuperaValor();
         }
     }
-    std::sort(lances.begin(),lances.end(),ordenaLances);
+    sort(lances.begin(),lances.end(),ordenaLances);
     size_t tamanho = lances.size() > 3 ? 3 : lances.size();
     maiores3Lances = vector<Lance>(lances.begin(), lances.begin() +tamanho);
 }
